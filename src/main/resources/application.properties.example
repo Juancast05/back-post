@@ -1,0 +1,24 @@
+spring.application.name=cafe-pos-backend
+
+# Conexion a PostgreSQL
+spring.datasource.url=jdbc:postgresql://localhost:5432/cafe_pos_db
+spring.datasource.username=postgres
+spring.datasource.password=tu_password_postgres
+
+# Configuracion de JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.open-in-view=false
+
+# Configuracion de Seguridad JWT
+jwt.secret=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+jwt.expiration=86400000
+
+# Configuracion de Correo SMTP (Gmail)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=tu_correo@gmail.com
+spring.mail.password=tu_clave_de_aplicacion_16_letras
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true

@@ -29,6 +29,16 @@ public class Usuario {
     @Column(nullable = false, length = 20)
     private Rol rol;
 
+    @Builder.Default
+    @Column(nullable = false)
+    private Boolean verificado = false;
+
+    @Column(name = "codigo_verificacion", length = 6)
+    private String codigoVerificacion;
+
+    @Column(name = "codigo_expiracion")
+    private java.time.LocalDateTime codigoExpiracion;
+
     @Column(nullable = false)
     private Boolean activo = true;
 
@@ -40,6 +50,7 @@ public class Usuario {
     protected void onCreate() {
         if (this.activo == null) {
             this.activo = true;
+
         }
     }
 }
